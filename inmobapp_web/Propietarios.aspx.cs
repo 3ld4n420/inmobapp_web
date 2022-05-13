@@ -145,14 +145,14 @@ namespace inmobapp_web
                                                                             ,@NumeroCuenta
                                                                             ,@Entidad)";
 
-                    cmd.Parameters.AddWithValue("@TipoId", SqlDbType.SmallInt).Value = tipoId;
+                    cmd.Parameters.AddWithValue("@TipoId", SqlDbType.Int).Value = tipoId;
                     cmd.Parameters.AddWithValue("@Identificacion", SqlDbType.NVarChar).Value = identificacion;
                     cmd.Parameters.AddWithValue("@Nombres", SqlDbType.NVarChar).Value = nombres;
                     cmd.Parameters.AddWithValue("@Direccion", SqlDbType.NVarChar).Value =  direccion;
                     cmd.Parameters.AddWithValue("@Telefono", SqlDbType.NVarChar).Value = telefono;
                     cmd.Parameters.AddWithValue("@Celular", SqlDbType.NVarChar).Value = celular;
                     cmd.Parameters.AddWithValue("@Email", SqlDbType.NVarChar).Value = email;
-                    cmd.Parameters.AddWithValue("@TipoCuenta", SqlDbType.NVarChar).Value = tipoCuenta;
+                    cmd.Parameters.AddWithValue("@TipoCuenta", SqlDbType.Int).Value = tipoCuenta;
                     cmd.Parameters.AddWithValue("@NumeroCuenta", SqlDbType.NVarChar).Value = numeroCuenta;
                     cmd.Parameters.AddWithValue("@Entidad", SqlDbType.NVarChar).Value = entidad;
 
@@ -215,14 +215,14 @@ namespace inmobapp_web
                                                                       WHERE Codigo = @Codigo";
                    
                     cmd.Parameters.Add("@Codigo", SqlDbType.Int).Value = codigo;
-                    cmd.Parameters.Add("@TipoId", SqlDbType.SmallInt).Value = tipoId;
+                    cmd.Parameters.Add("@TipoId", SqlDbType.Int).Value = tipoId;
                     cmd.Parameters.Add("@Identificacion", SqlDbType.NVarChar).Value = identificacion;
                     cmd.Parameters.Add("@Nombres", SqlDbType.NVarChar).Value = nombres;
                     cmd.Parameters.Add("@Direccion", SqlDbType.NVarChar).Value = direccion;
                     cmd.Parameters.Add("@Telefono", SqlDbType.NVarChar).Value = telefono;
                     cmd.Parameters.Add("@Celular", SqlDbType.NVarChar).Value = celular;
                     cmd.Parameters.Add("@Email", SqlDbType.NVarChar).Value = email;
-                    cmd.Parameters.Add("@TipoCuenta", SqlDbType.NVarChar).Value = tipoCuenta;
+                    cmd.Parameters.Add("@TipoCuenta", SqlDbType.Int).Value = tipoCuenta;
                     cmd.Parameters.Add("@NumeroCuenta", SqlDbType.NVarChar).Value = numeroCuenta;
                     cmd.Parameters.Add("@Entidad", SqlDbType.NVarChar).Value = entidad;
 
