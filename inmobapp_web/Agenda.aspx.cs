@@ -125,23 +125,27 @@ namespace inmobapp_web
                 return;
             }
             bool IsUpdated = false;
+            int id = Convert.ToInt32(txtCodigo.Text);
             string titulo = txtNombreCita.Text;
             string descripcion = txtDescripcion.Text;
             string cliente = txtNombreCliente.Text;
             string correo = txtCorreoCliente.Text;
-            string fechaRegistro = txtFechaRegistro.Text;
-            string fechaFin = txtFechaFin.Text;
+            DateTime fechaRegistro = Convert.ToDateTime(txtFechaRegistro.Text);
+            DateTime fechaFin = Convert.ToDateTime(txtFechaFin.Text);
             using (SqlConnection sqlCon = new SqlConnection(conn))
             {
                 using (SqlCommand cmd = new SqlCommand())
                 {
                     //here added "@" to write continuous string in new line
-                    cmd.CommandText = @"UPDATE  [dbo].[tb_agenda] ( nombre_cita
-                                                                            , descripcion_cita
-                                                                            , cliente_cita
-                                                                            , cliente_correo_cita   
-                                                                            , fecha_registro_cita
-                                                                            , fecha_fin_cita)";
+                    cmd.CommandText = @"UPDATE  [dbo].[tb_agenda]   SET  [nombre_cita] = @nombre_cita
+                                                                            , [descripcion_cita] = @descripcion_cita
+                                                                            , [cliente_cita] = @cliente_cita
+                                                                            , [cliente_correo_cita] =  @cliente_correo_cita
+                                                                            , [fecha_registro_cita]  = @fecha_registro_cita
+                                                                            , [fecha_fin_cita] = @fecha_fin_cita
+                                                                         WHERE id_cita = @id_cita";
+                    cmd.Parameters.AddWithValue("@id_cita", SqlDbType.Int).Value = id;
+                    cmd.Parameters.AddWithValue("@nombre_cita", SqlDbType.NVarChar).Value = titulo;
                     cmd.Parameters.AddWithValue("@descripcion_cita", SqlDbType.NVarChar).Value = descripcion;
                     cmd.Parameters.AddWithValue("@cliente_cita", SqlDbType.NVarChar).Value = cliente;
                     cmd.Parameters.AddWithValue("@cliente_correo_cita", SqlDbType.NVarChar).Value = correo;
@@ -178,14 +182,14 @@ namespace inmobapp_web
                 return;
             }
             bool IsDeleted = false;
-            int codigo = Convert.ToInt32(txtNombreCita.Text);
-            string nombres = txtNombreCita.Text;
+            int id = Convert.ToInt32(txtCodigo.Text);
+            string titulo = txtNombreCita.Text;
             using (SqlConnection sqlCon = new SqlConnection(conn))
             {
                 using (SqlCommand cmd = new SqlCommand())
                 {
-                    cmd.CommandText = "DELETE FROM tb_propietario WHERE Codigo=@Codigo";
-                    cmd.Parameters.AddWithValue("@Codigo", SqlDbType.Int).Value = codigo;
+                    cmd.CommandText = "DELETE FROM tb_agenda WHERE id_cita = @id_cita";
+                    cmd.Parameters.AddWithValue("@id_cita", SqlDbType.Int).Value = id;
                     cmd.Connection = sqlCon;
                     sqlCon.Open();
                     IsDeleted = cmd.ExecuteNonQuery() > 0;
@@ -194,13 +198,13 @@ namespace inmobapp_web
             }
             if (IsDeleted)
             {
-                lblMsg.Text = "'" + nombres + "' subject details deleted successfully!";
+                lblMsg.Text = "'" + titulo + "' subject details deleted successfully!";
                 lblMsg.ForeColor = System.Drawing.Color.Green;
                 BindData();
             }
             else
             {
-                lblMsg.Text = "Error while deleting '" + nombres + "' subject details";
+                lblMsg.Text = "Error while deleting '" + titulo + "' subject details";
                 lblMsg.ForeColor = System.Drawing.Color.Red;
             }
             ResetAll(); //to reset all form controls

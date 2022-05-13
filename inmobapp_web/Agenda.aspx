@@ -6,7 +6,7 @@
 
     <div runat="server" id="formulario">
 
-        <h4>DATOS BASICOS DEL PROPIETARIO</h4>
+        <h4>AGENDAR CITAS</h4>
 
          <table  style="margin: auto 0px auto auto; width: 90%; padding: 10px;" >
             <tr>
