@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "f583df4f-9b6e-4962-89a2-5e931f0b3b86": {
+      "ProjectGuid": "f583df4f-9b6e-4962-89a2-5e931f0b3b86",
+      "DisplayName": "inmobapp_web",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Archivos varios",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 1
+}
