@@ -6,7 +6,7 @@
 
     <div runat="server" id="formulario">
 
-        <h4>AGENDAR CITAS ASESORIAS</h4>
+        <h4>DATOS BASICOS DEL PROPIETARIO</h4>
 
          <table  style="margin: auto 0px auto auto; width: 90%; padding: 10px;" >
             <tr>
@@ -42,7 +42,7 @@
             <tr>
                  <td style="height: 50px">
                     <label>Fecha de Registro:</label><br/>
-                    <asp:TextBox ID="txtFechaRegistro" runat="server" CssClass="list-group-item" style="max-width: 100%; width: 75%; left: 14px; top: 0px;"  />
+                    <asp:TextBox ID="txtFechaRegistro" runat="server" CssClass="list-group-item" style="max-width: 100%; width: 75%; left: 5px; top: 0px;"  />
                 </td>   
                  <td style="height: 50px">
                     <label>Fecha de Finalización:</label><br/>
@@ -77,7 +77,7 @@
 
     <br />
     <asp:GridView CssClass="table table-bordered" ID="gvDatos" runat="server" CellPadding="3" GridLines="Horizontal"
-        DataKeyNames="Codigo" AutoGenerateColumns="False" OnSelectedIndexChanged="gvDatos_SelectedIndexChanged" HeaderStyle-BackColor="WhiteSmoke">
+        DataKeyNames="id_cita" AutoGenerateColumns="false" OnSelectedIndexChanged="gvDatos_SelectedIndexChanged" HeaderStyle-BackColor="WhiteSmoke">
 
 
         <Columns>
@@ -88,9 +88,11 @@
                 </ItemTemplate>
 
             </asp:TemplateField>
-
-
-            <asp:BoundField DataField="id_cita" HeaderText="ID" ReadOnly="true" />
+            <asp:TemplateField HeaderText="NumeroId">
+                <ItemTemplate>
+                    <asp:Label ID="lblNumeroId" Text='<%#Eval("id_cita") %>' runat="server" />
+                </ItemTemplate>
+            </asp:TemplateField>
             <asp:TemplateField HeaderText="Nombre Cita">
                 <ItemTemplate>
                     <asp:Label ID="lblNombre" Text='<%#Eval("nombre_cita") %>' runat="server" />
@@ -125,8 +127,6 @@
 
          
         </Columns>
-
-<HeaderStyle BackColor="WhiteSmoke"></HeaderStyle>
     </asp:GridView>
     <br />
 

@@ -7,6 +7,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+
+
 namespace inmobapp_web
 {
     public partial class Agenda : System.Web.UI.Page
@@ -21,10 +23,6 @@ namespace inmobapp_web
             if (!Page.IsPostBack)
             {
                 BindData();
-                //getTipoCuenta();
-                //getTipos();
-                //getEntidades();
-
             }
         }
 
@@ -77,22 +75,19 @@ namespace inmobapp_web
                 {
                     //here added "@" to write continuous string in new line
                     //
-                    cmd.CommandText = @"INSERT INTO [dbo].[tb_agenda] (id_cita
-                                                                            , nombre_cita
+                    cmd.CommandText = @"INSERT INTO [dbo].[tb_agenda] ( nombre_cita
                                                                             , descripcion_cita
                                                                             , cliente_cita
                                                                             , cliente_correo_cita   
                                                                             , fecha_registro_cita
                                                                             , fecha_fin_cita)
                                                                      VALUES 
-                                                                            (@id_cita
-                                                                            ,@nombre_cita
+                                                                            (@nombre_cita
                                                                             ,@descripcion_cita
                                                                             ,@cliente_cita
                                                                             ,@cliente_correo_cita
                                                                             ,@fecha_registro_cita
                                                                             ,@fecha_fin_cita)";
-                    cmd.Parameters.AddWithValue("@id_cita", SqlDbType.Int).Value = titulo;
                     cmd.Parameters.AddWithValue("@nombre_cita", SqlDbType.NVarChar).Value = titulo;
                     cmd.Parameters.AddWithValue("@descripcion_cita", SqlDbType.NVarChar).Value = descripcion;
                     cmd.Parameters.AddWithValue("@cliente_cita", SqlDbType.NVarChar).Value =  cliente;
@@ -141,14 +136,12 @@ namespace inmobapp_web
                 using (SqlCommand cmd = new SqlCommand())
                 {
                     //here added "@" to write continuous string in new line
-                    cmd.CommandText = @"UPDATE  [dbo].[tb_agenda] (id_cita
-                                                                            , nombre_cita
+                    cmd.CommandText = @"UPDATE  [dbo].[tb_agenda] ( nombre_cita
                                                                             , descripcion_cita
                                                                             , cliente_cita
                                                                             , cliente_correo_cita   
                                                                             , fecha_registro_cita
                                                                             , fecha_fin_cita)";
-                    cmd.Parameters.AddWithValue("@nombre_cita", SqlDbType.NVarChar).Value = titulo;
                     cmd.Parameters.AddWithValue("@descripcion_cita", SqlDbType.NVarChar).Value = descripcion;
                     cmd.Parameters.AddWithValue("@cliente_cita", SqlDbType.NVarChar).Value = cliente;
                     cmd.Parameters.AddWithValue("@cliente_correo_cita", SqlDbType.NVarChar).Value = correo;
@@ -226,13 +219,6 @@ namespace inmobapp_web
             gvDatos.Visible = true;
             btnNuevo.Visible = true;
 
-            //string titulo = txtNombreCita.Text;
-            //string descripcion = txtDescripcion.Text;
-            //string cliente = txtNombreCliente.Text;
-            //string correo = txtCorreoCliente.Text;
-            //string fechaRegistro = txtFechaRegistro.Text;
-            //string fechaFin = txtFechaFin.Text;
-
             txtNombreCita.Text = string.Empty;
             txtDescripcion.Text = string.Empty;
             txtNombreCita.Text = string.Empty;
@@ -268,5 +254,10 @@ namespace inmobapp_web
             this.btnNuevo.Visible = false;
         }
 
+        protected void ddlFechaRegistro_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+
+        }
     }
 }
