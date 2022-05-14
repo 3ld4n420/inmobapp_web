@@ -13,7 +13,7 @@
         <table style="margin: auto; width: 90%; padding: 10px;">
             <tr>
                 <td hidden>
-                    <label>Tipo:</label><br />
+                    <label>Codigo inmueble:</label><br />
                     <asp:TextBox ID="txtINM_ID" runat="server" CssClass="list-group-item col-lg-10" />
                 </td>
                 <td>
@@ -95,6 +95,31 @@
                 Text="Borrar" OnClick="btnDelete_Click" />
              <asp:Button CssClass="btn btn-secondary" ID="btnCancel" runat="server"
                  Text="Cancelar" OnClick="btnCancel_Click" />
+        </div>
+
+        <div>
+
+            <asp:RequiredFieldValidator class="alert alert-danger" ID="RequiredFieldValidator1" runat="server" ErrorMessage="RequiredFieldValidator" ControlToValidate="txtMatricula" ><strong>Por favor digite la Matricula del inmueble</strong> </asp:RequiredFieldValidator>
+            <br />
+            <br />
+            <asp:RegularExpressionValidator class="alert alert-danger" ID="RegularExpressionValidator2" runat="server" ErrorMessage="RegularExpressionValidator" ControlToValidate="txtArea" ValidationExpression="^\d+(\.\d\d)?$"><strong>Ingrese correctamente el área. Ejemplo: 100.08</strong> </asp:RegularExpressionValidator>
+            <br />
+            <br />
+            <asp:RequiredFieldValidator class="alert alert-danger" ID="RequiredFieldValidator2" runat="server" ErrorMessage="RequiredFieldValidator" ControlToValidate="txtDireccion"><strong>Por favor digite la dirección</strong> </asp:RequiredFieldValidator>
+            <br />
+            <br />
+            <asp:RequiredFieldValidator class="alert alert-danger" ID="RequiredFieldValidator3" runat="server" ErrorMessage="RequiredFieldValidator" ControlToValidate="txtValorVenta"><strong>Digite correctamente el valor de la Renta</strong> </asp:RequiredFieldValidator>
+            <asp:RegularExpressionValidator class="alert alert-danger" ID="RegularExpressionValidator4" runat="server" ErrorMessage="RegularExpressionValidator" ControlToValidate="txtValorVenta" ValidationExpression="^\d+(\.\d\d)?$"><strong>Digite correctamente el valor de la Renta</strong> </asp:RegularExpressionValidator>
+            <br />
+            <br />
+            <asp:RegularExpressionValidator class="alert alert-danger" ID="RegularExpressionValidator5" runat="server" ErrorMessage="RegularExpressionValidator" ControlToValidate="txtValorArriendo" ValidationExpression="^\d+(\.\d\d)?$"><strong>Digite correctamente el valor del Arriendo</strong> </asp:RegularExpressionValidator>
+            <br />
+            <br />
+            <asp:RegularExpressionValidator class="alert alert-danger" ID="RegularExpressionValidator6" runat="server" ErrorMessage="RegularExpressionValidator" ControlToValidate="txtValorAdmon" ValidationExpression="^\d+(\.\d\d)?$"><strong>Digite correctamente el valor de la Administración</strong> </asp:RegularExpressionValidator>
+            <br />
+            <br />
+            <asp:RegularExpressionValidator class="alert alert-danger" ID="RegularExpressionValidator7" runat="server" ErrorMessage="RegularExpressionValidator" ControlToValidate="txtValorImpuesto" ValidationExpression="^\d+(\.\d\d)?$"><strong>Digite correctamente el valor del Impuesto</strong> </asp:RegularExpressionValidator>
+
         </div>
     </div>
     <br />
