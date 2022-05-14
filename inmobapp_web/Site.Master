@@ -63,7 +63,7 @@
                         </li>
 
                         <li><a runat="server" href="~/Inmuebles">Inmuebles</a></li>
-                        <li><a runat="server" href="~/Agenda">Agenda</a></li>
+                        <li><a runat="server" href="~/Calendar">Agenda</a></li>
                         <li><a runat="server" href="~/Contact">Contacto</a></li>                    </ul>
                 </div>
             </div>
