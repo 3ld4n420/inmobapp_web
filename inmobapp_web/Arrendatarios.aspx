@@ -95,7 +95,7 @@
 
     <br />
     <asp:GridView CssClass="table table-bordered" ID="gvDatos" runat="server" CellPadding="3" GridLines="Horizontal"
-        DataKeyNames="Codigo" AutoGenerateColumns="False" OnSelectedIndexChanged="gvDatos_SelectedIndexChanged" HeaderStyle-BackColor="WhiteSmoke">
+        DataKeyNames="Codigo" AutoGenerateColumns="False" OnSelectedIndexChanged="gvDatos_SelectedIndexChanged" HeaderStyle-BackColor="#ff3399">
 
 
         <Columns>
@@ -147,7 +147,7 @@
          
         </Columns>
 
-<HeaderStyle BackColor="WhiteSmoke"></HeaderStyle>
+<HeaderStyle BackColor="#ff3399"></HeaderStyle>
     </asp:GridView>
     <br />
 

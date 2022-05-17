@@ -35,6 +35,7 @@
                                 <label>CONTRASEÑA</label>
                                 <asp:TextBox ID="txtPassword" runat="server" class="form-control" placeholder="Escribe tu Contraseña..." BorderStyle="Dotted" TextMode="Password"></asp:TextBox>
                             </div>
+                            <br />
                             <asp:Button ID="btnIngresar" runat="server" Text="Ingresar" class="btn btn-primary" OnClick="btnIngresar_Click" />
                         </form>
                     </div>

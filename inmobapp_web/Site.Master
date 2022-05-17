@@ -15,7 +15,7 @@
 
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-<%--    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" /> --%>
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
     
 </head>
 <body>
@@ -39,8 +39,38 @@
                 <%--Site Scripts--%>
             </Scripts>
         </asp:ScriptManager>
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="/Default"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="collapse navbar-collapse" id="navbarColor01">
+              <ul class="navbar-nav me-auto">
+                  <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Clientes</a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item text-dark" href="/Propietarios"><strong>Propietarios</strong></a>
+                    <a class="dropdown-item text-dark" href="/Arrendatarios"><strong>Arrendatarios</strong></a>
+                  </div>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="/Inmuebles">Inmuebles</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/Calendar">Agenda</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/Contact">Usuarios sistema</a>
+                </li>
+              
+              </ul>
+            </div>
+          </div>
+        </nav>
+<%--        <div class="navbar navbar-inverse navbar-fixed-top bg-danger">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -64,16 +94,15 @@
 
                         <li><a runat="server" href="~/Inmuebles">Inmuebles</a></li>
                         <li><a runat="server" href="~/Calendar">Agenda</a></li>
-                        <li><a runat="server" href="~/Contact">Contacto</a></li>                    </ul>
+                        <li><a runat="server" href="~/Contact">Contacto</a></li>                    
+                    </ul>
                 </div>
             </div>
-        </div>
+        </div>--%>
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
-            <hr />
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - Mi aplicación ASP.NET</p>
             </footer>
         </div>
 
