@@ -11,8 +11,8 @@
 
     <div runat="server" id="formulario">
         <div class="card border-primary mb-12">
-      <div class="card-header">DATOS BASICOS DEL ARRENDATARIO</div>
-      <div class="card-body">
+        <div class="card-header">DATOS BASICOS DEL ARRENDATARIO</div>
+        <div class="card-body">
         <table  style="margin: auto; width: 90%; padding: 10px;" >
             <tr>
                 <td hidden>

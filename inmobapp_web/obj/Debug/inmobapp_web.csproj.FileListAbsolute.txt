@@ -152,3 +152,7 @@ C:\Users\3LD4N\Desktop\Aplicacion Web\inmobapp_web\inmobapp_web\obj\Debug\inmoba
 C:\Users\3LD4N\Desktop\Aplicacion Web\inmobapp_web\inmobapp_web\obj\Debug\inmobapp_web.pdb
 C:\Users\3LD4N\Desktop\Aplicacion Web\inmobapp_web\inmobapp_web\bin\FluentValidation.dll
 C:\Users\3LD4N\Desktop\Aplicacion Web\inmobapp_web\inmobapp_web\bin\FluentValidation.xml
+C:\Users\jdoo2\Documents\GitHub\inmobapp_web\inmobapp_web\obj\Debug\inmobapp_web.csproj.AssemblyReference.cache
+C:\Users\jdoo2\Documents\GitHub\inmobapp_web\inmobapp_web\obj\Debug\inmobapp_web.csproj.CoreCompileInputs.cache
+C:\Users\jdoo2\Documents\GitHub\inmobapp_web\inmobapp_web\obj\Debug\inmobapp_web.dll
+C:\Users\jdoo2\Documents\GitHub\inmobapp_web\inmobapp_web\obj\Debug\inmobapp_web.pdb

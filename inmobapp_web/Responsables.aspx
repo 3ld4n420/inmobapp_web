@@ -5,10 +5,14 @@
     <br />
 
     <asp:Label ID="lblMsg" runat="server"></asp:Label>
+    <br />
+    <br />
+    <br />
 
     <div runat="server" id="formulario">
-
-        <h4>DATOS BASICOS DEL PROPIETARIO</h4>
+        <div class="card border-primary mb-12">
+        <div class="card-header">DATOS BASICOS DEL ASESOR EXTERNO</div>
+        <div class="card-body">
 
          <table  style="margin: auto; width: 90%; padding: 10px;" >
             <tr>
@@ -20,78 +24,97 @@
             <tr>
                 <td colspan="2">
                     <label>Nombres y Apellidos :</label><br />
-                    <asp:TextBox ID="txtNombres" runat="server" CssClass="list-group-item"  style=" max-width: 100%; width: 92%;" />
+                    <asp:TextBox ID="txtNombres" runat="server" CssClass="col-form-label border-primary col-lg-10"  style=" max-width: 100%; width: 92%;" ForeColor="Black" />
                 </td>
                 <td>
                     <label>Tipo:</label><br />
-                    <asp:DropDownList ID="ddlTipo" runat="server" CssClass="list-group-item col-lg-10"></asp:DropDownList>
+                    <asp:DropDownList ID="ddlTipo" runat="server" CssClass="list-group-item border-primary col-lg-10 text-dark bg-white"></asp:DropDownList>
                 </td>                
                 <td>
                     <label>Identificacion:</label><br />
-                    <asp:TextBox ID="txtIdentificacion" runat="server" CssClass="list-group-item col-lg-10" />
+                    <asp:TextBox ID="txtIdentificacion" runat="server" CssClass="col-form-label border-primary col-lg-10" ForeColor="Black"/>
                 </td>
             </tr>
             <tr>
                
                <td colspan="3">
                     <label>Direccion de Residencia:</label><br />
-                    <asp:TextBox ID="txtDireccion" runat="server" CssClass="list-group-item" style=" max-width: 100%; width: 95%;" />
+                    <asp:TextBox ID="txtDireccion" runat="server" CssClass="col-form-label border-primary col-lg-10" style=" max-width: 100%; width: 95%;" ForeColor="Black" />
                 </td>
               
                 <td>
                      <label>Telfono Fijo :</label><br />
-                    <asp:TextBox ID="txtFijo" runat="server" CssClass="list-group-item col-lg-10"  />
+                    <asp:TextBox ID="txtFijo" runat="server" CssClass="col-form-label border-primary col-lg-10"  ForeColor="Black"/>
                 
                 </td>
             </tr>
             <tr>
                 <td colspan="2">
                     <label>Telefono Movil :</label><br />
-                    <asp:TextBox ID="txtCelular" runat="server" CssClass="list-group-item" style="max-width: 100%; width: 92%;" />
+                    <asp:TextBox ID="txtCelular" runat="server" CssClass="col-form-label border-primary col-lg-10" style="max-width: 100%; width: 92%;" ForeColor="Black" />
                 </td>
                   <td colspan="2">
                     <label>Correo Electronico:</label><br />
-                     <asp:TextBox ID="txtMail" runat="server" CssClass="list-group-item" style="max-width: 100%; width: 75%;"  />
+                     <asp:TextBox ID="txtMail" runat="server" CssClass="col-form-label border-primary col-lg-10" style="max-width: 100%; width: 75%;" ForeColor="Black"  />
 
                 </td>                
              
             </tr>
         
 
-        </table>
-
+            </table>
+        </div>
+    </div>
 
 
         <div style="margin: auto; width: 30%; padding: 10px;">
 
-            <asp:Button ID="btnInsert" runat="server"
+            <asp:Button CssClass="btn btn-success" ID="btnInsert" runat="server"
                 Text="Crear" OnClick="btnInsert_Click" />
-            <asp:Button ID="btnUpdate" runat="server"
+             <asp:Button CssClass="btn btn-warning" ID="btnUpdate" runat="server"
                 Text="Actualizar" OnClick="btnUpdate_Click" />
-            <asp:Button ID="btnDelete" runat="server"
+             <asp:Button CssClass="btn btn-danger" ID="btnDelete" runat="server"
                 Text="Borrar" OnClick="btnDelete_Click" />
-            <asp:Button ID="btnCancel" runat="server"
-                Text="Cancelar" OnClick="btnCancel_Click" />
+             <asp:Button CssClass="btn btn-secondary" ID="btnCancel" runat="server"
+                 Text="Cancelar" OnClick="btnCancel_Click" />
+        </div>
+        <!-- VALIDACIONES DE LOS CAMPOS -->
+        <div >
+            <asp:RegularExpressionValidator class="alert alert-danger" ID="RegularExpressionValidator3" runat="server" ErrorMessage="RegularExpressionValidator" ControlToValidate="txtNombres" ValidationExpression="^[a-zA-Z''-'\s]{1,40}$"><strong>Escriba correctamente sus nombres y apellidos</strong></asp:RegularExpressionValidator>
+            <br />
+            <br />
+            <br />
+            <asp:RegularExpressionValidator class="alert alert-danger" ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtMail" ErrorMessage="RegularExpressionValidator" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"><strong>Correo electrónico incorrecto</strong></asp:RegularExpressionValidator>
+            <br />
+            <br />
+            <br />
+            <asp:RegularExpressionValidator class="alert alert-danger" ID="RegularExpressionValidator6" runat="server" ErrorMessage="RegularExpressionValidator" ValidationExpression="^\d+$" ControlToValidate="txtIdentificacion"><strong>Digite correctamente su identificación</strong> </asp:RegularExpressionValidator>
+            <br />
+            <br />
+            <br />
+            <asp:RegularExpressionValidator class="alert alert-danger" ID="RegularExpressionValidator4" runat="server" ErrorMessage="RegularExpressionValidator" ValidationExpression="^\d+$" ControlToValidate="txtFijo"><strong>Digite correctamente su teléfono fijo</strong></asp:RegularExpressionValidator>
+            <br />
+            <br />
+            <br />
+            <asp:RegularExpressionValidator class="alert alert-danger" ID="RegularExpressionValidator2" runat="server" ErrorMessage="RegularExpressionValidator" ValidationExpression="^\d+$" ControlToValidate="txtCelular"><strong>Digite correctamente su teléfono móvil</strong></asp:RegularExpressionValidator>
+            <br />
+            <br />
+            <br />
         </div>
 
 
-
     </div>
-
-
-
-
-
+        
     <br />
     <asp:GridView CssClass="table table-bordered" ID="gvDatos" runat="server" CellPadding="3" GridLines="Horizontal"
-        DataKeyNames="Codigo" AutoGenerateColumns="false" OnSelectedIndexChanged="gvDatos_SelectedIndexChanged" HeaderStyle-BackColor="WhiteSmoke">
+        DataKeyNames="Codigo" AutoGenerateColumns="false" OnSelectedIndexChanged="gvDatos_SelectedIndexChanged" HeaderStyle-BackColor="#ff3399">
 
 
         <Columns>
 
             <asp:TemplateField HeaderText="Seleccionar">
                 <ItemTemplate>
-                    <asp:LinkButton ID="lbtnSelect" runat="server" CommandName="Select" Text="Seleccionar" />
+                    <asp:LinkButton CssClass="btn btn-primary" ID="lbtnSelect" runat="server" CommandName="Select" Text="Seleccionar" />
                 </ItemTemplate>
 
             </asp:TemplateField>
@@ -139,8 +162,8 @@
 
     <div style="margin: 0 auto; width: 10%">
 
-        <asp:Button ID="btnNuevo" runat="server"
-            Text="Nuevo" OnClick="btnNuevo_Click" />
+        <asp:Button CssClass="btn btn-primary" ID="btnNuevo" runat="server"
+            Text="Nuevo" OnClick="btnNuevo_Click" Width="82px" />
     </div>
 
 

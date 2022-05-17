@@ -8,83 +8,84 @@
     <br />
     <br />
     <div runat="server" id="formulario">
-        <h3>DATOS BASICOS DEL INMUEBLE</h3>
-
-        <table style="margin: auto; width: 90%; padding: 10px;">
+        <div class="card border-primary mb-12">
+          <div class="card-header">DATOS BASICOS DEL INMUEBLE</div>
+          <div class="card-body">
+            <table style="margin: auto; width: 90%; padding: 10px;">
             <tr>
                 <td hidden>
                     <label>Codigo inmueble:</label><br />
-                    <asp:TextBox ID="txtINM_ID" runat="server" CssClass="list-group-item col-lg-10" />
+                    <asp:TextBox ID="txtINM_ID" runat="server" CssClass="col-form-label border-primary col-lg-10" ForeColor="Black"/>
                 </td>
                 <td>
                     <label>Propietario Inmueble:</label><br />
-                    <asp:DropDownList ID="ddlPropietario" runat="server" CssClass="list-group-item  col-lg-10"></asp:DropDownList>
+                    <asp:DropDownList ID="ddlPropietario" runat="server" CssClass="list-group-item border-primary col-lg-10 text-dark bg-white"></asp:DropDownList>
                 </td>
                 <td>
                     <label>Matricula:</label><br />
-                    <asp:TextBox ID="txtMatricula" runat="server" CssClass="list-group-item col-lg-10" />
+                    <asp:TextBox ID="txtMatricula" runat="server" CssClass="col-form-label border-primary col-lg-10" ForeColor="Black"/>
                 </td>
             </tr>
             <tr>
                 <td>
                     <label>Modalidad:</label><br />
-                    <asp:DropDownList ID="ddlModalidad" runat="server" CssClass="list-group-item  col-lg-10"></asp:DropDownList>
+                    <asp:DropDownList ID="ddlModalidad" runat="server" CssClass="col-form-label border-primary col-lg-10"  ForeColor="Black"></asp:DropDownList>
                 </td>
                 <td>
                     <label>Tipo:</label><br />
-                    <asp:DropDownList ID="ddlTipo" runat="server" CssClass="list-group-item col-lg-10"></asp:DropDownList>
+                    <asp:DropDownList ID="ddlTipo" runat="server" CssClass="list-group-item border-primary col-lg-10 text-dark bg-white"></asp:DropDownList>
                 </td>
                 <td>
                     <label>Estrato:</label><br />
-                    <asp:DropDownList ID="ddlEstrato" runat="server" CssClass="list-group-item col-lg-10"></asp:DropDownList>
+                    <asp:DropDownList ID="ddlEstrato" runat="server" CssClass="list-group-item border-primary col-lg-10 text-dark bg-white"></asp:DropDownList>
                 </td>
                 <td>
                     <label>Area:</label><br />
-                    <asp:TextBox ID="txtArea" runat="server" CssClass="list-group-item col-lg-10" />
+                    <asp:TextBox ID="txtArea" runat="server" CssClass="col-form-label border-primary col-lg-10" ForeColor="Black"/>
                 </td>
             </tr>
             <tr>
                 <td>
                     <label>Municipio:</label><br />
-                    <asp:DropDownList ID="ddlMpio" runat="server" CssClass="list-group-item col-lg-10"></asp:DropDownList>
+                    <asp:DropDownList ID="ddlMpio" runat="server" CssClass="list-group-item border-primary col-lg-10 text-dark bg-white"></asp:DropDownList>
                 </td>
                 <td>
                     <label>Lugar:</label><br />
-                    <asp:DropDownList ID="ddlLugares" runat="server" CssClass="list-group-item col-lg-10"></asp:DropDownList>
+                    <asp:DropDownList ID="ddlLugares" runat="server" CssClass="list-group-item border-primary col-lg-10 text-dark bg-white"></asp:DropDownList>
                 </td>
                 <td>
                     <label>Sector:</label><br />
-                    <asp:DropDownList ID="ddlBarrio" runat="server" CssClass="list-group-item col-lg-10"></asp:DropDownList>
+                    <asp:DropDownList ID="ddlBarrio" runat="server" CssClass="list-group-item border-primary col-lg-10 text-dark bg-white"></asp:DropDownList>
                 </td>
             </tr>
             <tr>
                 <td colspan="4">
                     <label>Direccion :</label><br />
-                    <asp:TextBox ID="txtDireccion" runat="server" CssClass="list-group-item col-lg-10" Style="max-width: 100%; width: 71%;" />
+                    <asp:TextBox ID="txtDireccion" runat="server" CssClass="col-form-label border-primary col-lg-10" Style="max-width: 100%; width: 71%;" ForeColor="Black"/>
                 </td>
             </tr>
             <tr>
                 <td>
                     <label>Valor Renta:</label><br />
-                    <asp:TextBox ID="txtValorVenta" runat="server" CssClass="list-group-item col-lg-10" />
+                    <asp:TextBox ID="txtValorVenta" runat="server" CssClass="col-form-label border-primary col-lg-10" ForeColor="Black"/>
                 </td>
                 <td>
                     <label>Valor Arriendo:</label><br />
-                    <asp:TextBox ID="txtValorArriendo" runat="server" CssClass="list-group-item col-lg-10" />
+                    <asp:TextBox ID="txtValorArriendo" runat="server" CssClass="col-form-label border-primary col-lg-10" ForeColor="Black"/>
                 </td>
                 <td>
                     <label>Valor Administracion:</label><br />
-                    <asp:TextBox ID="txtValorAdmon" runat="server" CssClass="list-group-item col-lg-10" />
+                    <asp:TextBox ID="txtValorAdmon" runat="server" CssClass="col-form-label border-primary col-lg-10" ForeColor="Black"/>
                 </td>
                 <td>
                     <label>Valor Impuesto:</label><br />
-                    <asp:TextBox ID="txtValorImpuesto" runat="server" CssClass="list-group-item col-lg-10" />
+                    <asp:TextBox ID="txtValorImpuesto" runat="server" CssClass="col-form-label border-primary col-lg-10" ForeColor="Black"/>
                 </td>
             </tr>
         </table>
-        <br />
-        <br />
-        <br />
+
+          </div>
+        </div>
 
         <div style="margin: auto; width: 30%; padding: 10px;">
             <asp:Button CssClass="btn btn-success" ID="btnInsert" runat="server"
@@ -108,11 +109,11 @@
             <asp:RequiredFieldValidator class="alert alert-danger" ID="RequiredFieldValidator2" runat="server" ErrorMessage="RequiredFieldValidator" ControlToValidate="txtDireccion"><strong>Por favor digite la dirección</strong> </asp:RequiredFieldValidator>
             <br />
             <br />
+            <asp:RegularExpressionValidator class="alert alert-danger" ID="RegularExpressionValidator5" runat="server" ErrorMessage="RegularExpressionValidator" ControlToValidate="txtValorArriendo" ValidationExpression="^\d+(\.\d\d)?$"><strong>Digite correctamente el valor del Arriendo</strong> </asp:RegularExpressionValidator>
+            <br />
             <asp:RequiredFieldValidator class="alert alert-danger" ID="RequiredFieldValidator3" runat="server" ErrorMessage="RequiredFieldValidator" ControlToValidate="txtValorVenta"><strong>Digite correctamente el valor de la Renta</strong> </asp:RequiredFieldValidator>
             <asp:RegularExpressionValidator class="alert alert-danger" ID="RegularExpressionValidator4" runat="server" ErrorMessage="RegularExpressionValidator" ControlToValidate="txtValorVenta" ValidationExpression="^\d+(\.\d\d)?$"><strong>Digite correctamente el valor de la Renta</strong> </asp:RegularExpressionValidator>
             <br />
-            <br />
-            <asp:RegularExpressionValidator class="alert alert-danger" ID="RegularExpressionValidator5" runat="server" ErrorMessage="RegularExpressionValidator" ControlToValidate="txtValorArriendo" ValidationExpression="^\d+(\.\d\d)?$"><strong>Digite correctamente el valor del Arriendo</strong> </asp:RegularExpressionValidator>
             <br />
             <br />
             <asp:RegularExpressionValidator class="alert alert-danger" ID="RegularExpressionValidator6" runat="server" ErrorMessage="RegularExpressionValidator" ControlToValidate="txtValorAdmon" ValidationExpression="^\d+(\.\d\d)?$"><strong>Digite correctamente el valor de la Administración</strong> </asp:RegularExpressionValidator>
@@ -129,7 +130,7 @@
     </div>
 
     <asp:GridView CssClass="table table-bordered" ID="gvDatos" runat="server" CellPadding="3" GridLines="Horizontal"
-        DataKeyNames="INM_ID" AutoGenerateColumns="false" OnSelectedIndexChanged="gvDatos_SelectedIndexChanged" HeaderStyle-BackColor="WhiteSmoke" OnRowCommand="gvDatos_RowCommand" OnRowEditing="gvDatos_RowEditing">
+        DataKeyNames="INM_ID" AutoGenerateColumns="false" OnSelectedIndexChanged="gvDatos_SelectedIndexChanged" HeaderStyle-BackColor="#ff3399" OnRowCommand="gvDatos_RowCommand" OnRowEditing="gvDatos_RowEditing">
         <Columns>
             <asp:TemplateField HeaderText="Seleccionar">
                 <ItemTemplate>
@@ -252,7 +253,7 @@
 
         <h4>INVENTARIO ENTRADA</h4>
 
-        <asp:GridView ID="gvEntrada" runat="server" CssClass="table table-bordered" HeaderStyle-BackColor="WhiteSmoke" AutoGenerateColumns="false"
+        <asp:GridView ID="gvEntrada" runat="server" CssClass="table table-bordered" HeaderStyle-BackColor="#ff3399" AutoGenerateColumns="false"
             CellPadding="3" AutoGenerateEditButton="True" OnRowCancelingEdit="gvEntrada_RowCancelingEdit" OnRowEditing="gvEntrada_RowEditing" OnRowUpdating="gvEntrada_RowUpdating">
             <Columns>
                 <asp:TemplateField HeaderText="Id">
@@ -331,7 +332,7 @@
 
         <h4>INVENTARIO SALA</h4>
 
-        <asp:GridView ID="gvSala" runat="server" CssClass="table table-bordered" HeaderStyle-BackColor="WhiteSmoke" AutoGenerateColumns="false"
+        <asp:GridView ID="gvSala" runat="server" CssClass="table table-bordered" HeaderStyle-BackColor="#ff3399" AutoGenerateColumns="false"
             CellPadding="3" AutoGenerateEditButton="True" OnRowCancelingEdit="gvSala_RowCancelingEdit" OnRowEditing="gvSala_RowEditing" OnRowUpdating="gvSala_RowUpdating">
             <Columns>
                 <asp:TemplateField HeaderText="Id">
@@ -411,7 +412,7 @@
         <h4>INVENTARIO COMEDOR</h4>
 
 
-        <asp:GridView ID="gvComedor" runat="server" CssClass="table table-bordered" HeaderStyle-BackColor="WhiteSmoke" AutoGenerateColumns="false"
+        <asp:GridView ID="gvComedor" runat="server" CssClass="table table-bordered" HeaderStyle-BackColor="#ff3399" AutoGenerateColumns="false"
             CellPadding="3" AutoGenerateEditButton="True" OnRowCancelingEdit="gvComedor_RowCancelingEdit" OnRowEditing="gvComedor_RowEditing" OnRowUpdating="gvComedor_RowUpdating">
             <Columns>
                 <asp:TemplateField HeaderText="Id">

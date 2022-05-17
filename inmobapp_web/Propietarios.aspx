@@ -107,6 +107,9 @@
         <!------------------------------------VALIDACIONES DE LOS CAMPOS------------------------------------------------------------>
         <div >
             <asp:CustomValidator class="alert alert-danger text-dark" ID="CustomValidator1" runat="server" ErrorMessage="CustomValidator"><strong>Llene por favor los campos</strong></asp:CustomValidator>
+            <br />
+            <br />
+            <br />
             <asp:RegularExpressionValidator class="alert alert-danger text-dark" ID="RegularExpressionValidator3" runat="server" ErrorMessage="RegularExpressionValidator" ControlToValidate="txtNombres" ValidationExpression="^[a-zA-Z''-'\s]{1,40}$"><strong>Escriba correctamente sus nombres y apellidos</strong></asp:RegularExpressionValidator>
             <br />
             <br />

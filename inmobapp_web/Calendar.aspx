@@ -1,13 +1,20 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Calendar.aspx.cs" Inherits="inmobapp_web.Calendar" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server" >
+    <br /> 
+    <br /> 
+    <br /> 
     <h1>AGENDA</h1>
     <asp:Label ID="lblMsg" runat="server"></asp:Label>
-    <table class="table" >
+    <table class="table" dir="ltr" >
         <tr>
             <td class="modal-sm" style="width: 180px">
-                <asp:Calendar CssClass="table table-bordered" ID="Calendar1" runat="server" OnSelectionChanged="Calendar1_SelectionChanged" Width="50px"></asp:Calendar>
-                <br />  
-                    <br />  
+                <asp:Calendar CssClass="table table-bordered" ID="Calendar1" runat="server" OnSelectionChanged="Calendar1_SelectionChanged" Width="50px" BackColor="White" ForeColor="Black">
+                    <DayHeaderStyle BackColor="#FF3399" BorderColor="White" />
+                    <DayStyle BackColor="White" />
+                    <OtherMonthDayStyle BackColor="#FF3399" />
+                    <TitleStyle BackColor="White" BorderColor="White" Wrap="True" />
+                    <WeekendDayStyle BackColor="White" />
+                </asp:Calendar>
                 <table  style="width:10%">
                     <tr>
                         <td><b>Fecha :</b></td>
@@ -20,12 +27,12 @@
                      <tr>
                         <td><b>Evento: </b></td>
                          
-                        <td><textarea id="txtDescripcion" cols="20" rows="2" runat="server"></textarea></td>
+                        <td><textarea id="txtDescripcion" rows="4" runat="server" style="width: 177px; color: #000000;" CssClass="col-form-label border-primary col-lg-10" enableviewstate="True"  ></textarea></td>
                          
                     </tr>
                      <tr>
                         <td><b>Responsable: </b></td>
-                          <td><asp:DropDownList ID="ddlResponsable" runat="server" CssClass="list-group-item col-lg-10"></asp:DropDownList>
+                          <td><asp:DropDownList ID="ddlResponsable" runat="server"  CssClass="col-form-label border-primary col-lg-10" ForeColor="Black"></asp:DropDownList>
                          </td>
                         
                     </tr>
@@ -45,13 +52,19 @@
                 </table> 
             </td>
             <td style="">
-            <asp:GridView ID="gvData" CssClass="table table-bordered"  runat="server" DataKeyNames="idEvento, idhora, Hora" AutoGenerateColumns="false" HeaderStyle-BackColor="WhiteSmoke"  
+            <asp:GridView ID="gvData" CssClass="table table-bordered"  runat="server" DataKeyNames="idEvento, idhora, Hora" AutoGenerateColumns="false" HeaderStyle-BackColor="#ff3399"  
                 style="max-width:60%" OnSelectedIndexChanged="gvData_SelectedIndexChanged">
-                 <rowstyle Height="45px" />
+                 <EditRowStyle BackColor="White" />
+                 <FooterStyle BackColor="White" />
+
+
+                 <PagerStyle BackColor="White" />
+                 <rowstyle Height="45px" BackColor="White" BorderColor="White" Font-Bold="False" ForeColor="Black" />
+                 <AlternatingRowStyle BackColor="White" />
         <Columns>
             <asp:TemplateField HeaderText="Seleccionar">
                 <ItemTemplate>
-                    <asp:LinkButton CssClass="btn btn-default" ID="lbtnSelect" runat="server" CommandName="Select" Text="Seleccionar"   />
+                    <asp:LinkButton CssClass="btn btn-primary" ID="lbtnSelect" runat="server" CommandName="Select" Text="Seleccionar"   />
                 </ItemTemplate>
             </asp:TemplateField>
           
