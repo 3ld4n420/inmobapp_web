@@ -33,12 +33,17 @@ namespace inmobapp_web
             Calendar1.Width = new Unit(100);
             Calendar1.OtherMonthDayStyle.BackColor = System.Drawing.Color.Cornsilk;
             date = DateTime.Now;
-            ViewState["date"] = date;
 
             lblFecha.Text = date.ToString("D");
 
-            if (!IsPostBack)
-                getData(date);
+            getResponsable();
+
+            if (!IsPostBack) { 
+                            getData(date);
+                ViewState["date"] = Calendar1.SelectedDate;
+
+
+            }
         }
 
         public void getData(DateTime date)
@@ -57,20 +62,23 @@ namespace inmobapp_web
                 string sql = $@"  SELECT isnull(e. id, 0) as idEvento, 
                                            h.idhora,
                                            h.hora,
-                                           Isnull(e.descripcion, '') AS descripcion
+                                           Isnull(e.descripcion, '') AS descripcion,
+                                           Isnull(r.nombres, 'Sin Asignar') as responsable
                                     FROM   tb_horas h
-                                           INNER JOIN tb_events e
-                                                   ON e.idhora = h.idhora
+                                           INNER JOIN tb_events e ON e.idhora = h.idhora 
+                                           INNER JOIN tb_responsable r on r.codigo = e.responsable
                                     WHERE  e.fechainicio = '{filtro}'
                                     UNION
                                     SELECT isnull(e. id, 0) as id,
                                            h.idhora,
                                            h.hora,
-                                           Isnull(e.descripcion, '') AS descripcion
+                                           Isnull(e.descripcion, '') AS descripcion,
+                                           Isnull(r.nombres, 'Sin Asignar') as responsable
                                     FROM   tb_horas h
-                                           LEFT JOIN tb_events e
-                                                  ON e.idhora = h.idhora
-                                                     AND e.idhora IS NULL
+                                           LEFT JOIN tb_events e ON e.idhora = h.idhora AND e.idhora IS NULL
+                                           LEFT JOIN tb_responsable r on r.codigo = e.responsable
+
+                                                    
                                     WHERE  h.idhora NOT IN (SELECT h.idhora
                                                             FROM   tb_horas h
                                                                    INNER JOIN tb_events e
@@ -101,6 +109,8 @@ namespace inmobapp_web
 
         }
 
+
+
         public void getEvento(int id)
         {
 
@@ -113,13 +123,15 @@ namespace inmobapp_web
                     _connection.Open();
 
 
-                string sql = $@"  SELECT isnull(e. id, 0) as idEvento, 
+                string sql = $@"SELECT isnull(e. id, 0) as idEvento, 
                                            h.idhora,
                                            h.hora,
-                                           Isnull(e.descripcion, '') AS descripcion
+                                           Isnull(e.descripcion, '') AS descripcion,
+										   r.nombres as responsable
+										   
                                     FROM   tb_horas h
-                                     INNER JOIN tb_events e
-                                                   ON e.idhora = h.idhora
+                                     INNER JOIN tb_events e ON e.idhora = h.idhora
+									 inner JOIN tb_responsable r on r.codigo = e.responsable
                                     WHERE  e.id = '{id}'";
 
 
@@ -132,6 +144,7 @@ namespace inmobapp_web
                     ViewState["idHora"] = drr["idHora"].ToString();
                     ViewState["Hora"] = drr["hora"].ToString();
                     ViewState["Descripcion"] = drr["descripcion"].ToString();
+                    ViewState["responsable"] = drr["responsable"].ToString();
                 }
 
             }
@@ -147,13 +160,25 @@ namespace inmobapp_web
 
         }
 
+        private void getResponsable()
+        {
+
+            // Establece la consulta SQL a ejecutar
+            string consulta = "SELECT codigo ,Nombres FROM tb_responsable";
+            SqlDataAdapter da = new SqlDataAdapter(consulta, conn);
+            DataSet ds = new DataSet();
+            da.Fill(ds, "Responsables");
+            ddlResponsable.DataSource = ds.Tables["Responsables"].DefaultView;
+            ddlResponsable.DataTextField = "Nombres";
+            ddlResponsable.DataValueField = "Codigo";
+            ddlResponsable.DataBind();
+        }
+
         protected void Calendar1_SelectionChanged(object sender, EventArgs e)
         {
-            date = Calendar1.SelectedDate;
-            ViewState["date"] = date;
-
-            lblFecha.Text = date.ToString("D");
-            getData(date);
+            ViewState["date"] = Calendar1.SelectedDate;
+            lblFecha.Text = Calendar1.SelectedDate.ToString("D");
+            getData(Calendar1.SelectedDate);
 
             if (ViewState["date"] != null && ViewState["idHora"] != null)
                 btnAceptar.Enabled = true;
@@ -182,6 +207,7 @@ namespace inmobapp_web
                     lblHora.Text = ViewState["Hora"].ToString();
                     lblFecha.Text = Convert.ToDateTime(ViewState["date"]).ToString("D");
                     txtDescripcion.InnerText = ViewState["Descripcion"].ToString();
+                    ddlResponsable.Items.FindByText(ViewState["responsable"].ToString());
                 }
                 else
                 {
@@ -189,7 +215,7 @@ namespace inmobapp_web
                     ViewState["idHora"] = idHora;
 
                     lblHora.Text = hora;
-                    lblFecha.Text = date.ToString("D");
+                    lblFecha.Text = Calendar1.SelectedDate.ToString("D");
                     txtDescripcion.InnerText = String.Empty;
 
                 }
@@ -232,19 +258,22 @@ namespace inmobapp_web
 			                                                   ,[fechaInicio]
 			                                                   ,[fechaFin]
 			                                                   ,[activo]
-			                                                   ,[idhora])
+			                                                   ,[idhora]
+                                                               ,[responsable])
                                                    VALUES
                                                                            (@desc
                                                                            ,@date
                                                                            ,@date 
                                                                            ,1
-                                                                           ,@idHora)";
+                                                                           ,@idHora
+                                                                           ,@responsable)";
 
 
 
                     cmd.Parameters.AddWithValue("@date", ViewState["date"]);
                     cmd.Parameters.AddWithValue("@idHora", ViewState["idHora"]);
                     cmd.Parameters.AddWithValue("@desc", txtDescripcion.InnerText);
+                    cmd.Parameters.AddWithValue("@responsable", ddlResponsable.SelectedValue);
 
 
                     cmd.Connection = sqlCon;
@@ -281,8 +310,9 @@ namespace inmobapp_web
                 using (SqlCommand cmd = new SqlCommand())
                 {
                     //here added "@" to write continuous string in new line
-                    cmd.CommandText = @"UPDATE [dbo].[tb_events] SET  Descripcion = @Descipcion WHERE Id = @Id";
+                    cmd.CommandText = @"UPDATE [dbo].[tb_events] SET  Descripcion = @Descipcion, responsable = @responsable  WHERE Id = @Id";
                     cmd.Parameters.Add("@Descipcion", SqlDbType.NVarChar).Value = txtDescripcion.InnerText;
+                    cmd.Parameters.Add("@responsable", SqlDbType.Int).Value = ddlResponsable.SelectedValue;
                     cmd.Parameters.Add("@Id", SqlDbType.Int).Value = ViewState["IdEvento"];
                     cmd.Connection = sqlCon;
                     sqlCon.Open();

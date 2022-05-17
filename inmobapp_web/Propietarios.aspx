@@ -10,8 +10,7 @@
     <br />
     <br />
 
-    <div runat="server" id="formulario" class="">
-
+    <div runat="server" id="formulario">
         <div class="card border-primary mb-12">
           <div class="card-header">DATOS BASICOS DEL PROPIETARIO</div>
           <div class="card-body">
@@ -105,6 +104,7 @@
         </div>
         <br />
         <br />
+        <!------------------------------------VALIDACIONES DE LOS CAMPOS------------------------------------------------------------>
         <div >
             <asp:CustomValidator class="alert alert-danger text-dark" ID="CustomValidator1" runat="server" ErrorMessage="CustomValidator"><strong>Llene por favor los campos</strong></asp:CustomValidator>
             <asp:RegularExpressionValidator class="alert alert-danger text-dark" ID="RegularExpressionValidator3" runat="server" ErrorMessage="RegularExpressionValidator" ControlToValidate="txtNombres" ValidationExpression="^[a-zA-Z''-'\s]{1,40}$"><strong>Escriba correctamente sus nombres y apellidos</strong></asp:RegularExpressionValidator>
@@ -141,7 +141,7 @@
 
         <Columns>
 
-            <asp:TemplateField HeaderText="Seleccionar">
+            <asp:TemplateField HeaderText="Seleccionar"> 
                 <ItemTemplate>
                     <asp:LinkButton CssClass="btn btn-primary" ID="lbtnSelect" runat="server" CommandName="Select" Text="Seleccionar" />
                 </ItemTemplate>

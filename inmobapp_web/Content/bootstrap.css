@@ -5333,7 +5333,7 @@ a.thumbnail.active {
 .list-group-item:first-child {
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
-    top: 0px;
+    top: 1px;
     left: 0px;
 }
 .list-group-item:last-child {

@@ -60,6 +60,15 @@ namespace inmobapp_web
         protected global::System.Web.UI.HtmlControls.HtmlTextArea txtDescripcion;
 
         /// <summary>
+        /// Control ddlResponsable.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlResponsable;
+
+        /// <summary>
         /// Control btnAceptar.
         /// </summary>
         /// <remarks>

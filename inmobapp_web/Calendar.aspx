@@ -2,10 +2,10 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <h1>AGENDA</h1>
     <asp:Label ID="lblMsg" runat="server"></asp:Label>
-    <table class="table"  style=" margin-top:10px">
+    <table class="table" >
         <tr>
-            <td class="modal-sm" style="width: 206px">
-                <asp:Calendar ID="Calendar1" runat="server" OnSelectionChanged="Calendar1_SelectionChanged" Width="71px"></asp:Calendar>
+            <td class="modal-sm" style="width: 180px">
+                <asp:Calendar CssClass="table table-bordered" ID="Calendar1" runat="server" OnSelectionChanged="Calendar1_SelectionChanged" Width="50px"></asp:Calendar>
                 <br />  
                     <br />  
                 <table  style="width:10%">
@@ -24,20 +24,34 @@
                          
                     </tr>
                      <tr>
+                        <td><b>Responsable: </b></td>
+                          <td><asp:DropDownList ID="ddlResponsable" runat="server" CssClass="list-group-item col-lg-10"></asp:DropDownList>
+                         </td>
+                        
+                    </tr>
+                    
+                     <tr>
+                        <td colspan="2">
+                            <hr />
+                        </td>
+                         
+                    </tr>
+                    
+                     <tr>
                         <td></td>
-                        <td><asp:Button CssClass="btn btn-success" ID="btnAceptar" runat="server" Text="Aceptar" Enabled="False" OnClick="btnAceptar_Click" /></td>
+                        <td><asp:Button CssClass="btn btn-primary" ID="btnAceptar" runat="server" Text="Aceptar" Enabled="False" OnClick="btnAceptar_Click" /></td>
                          
                     </tr>
                 </table> 
             </td>
             <td style="">
-            <asp:GridView CssClass="table table-bordered" ID="gvData" runat="server" DataKeyNames="idEvento, idhora, Hora" AutoGenerateColumns="false" HeaderStyle-BackColor="WhiteSmoke"  
-                style="max-width:60%" CellPadding="3" GridLines="Horizontal" OnSelectedIndexChanged="gvData_SelectedIndexChanged">
+            <asp:GridView ID="gvData" CssClass="table table-bordered"  runat="server" DataKeyNames="idEvento, idhora, Hora" AutoGenerateColumns="false" HeaderStyle-BackColor="WhiteSmoke"  
+                style="max-width:60%" OnSelectedIndexChanged="gvData_SelectedIndexChanged">
                  <rowstyle Height="45px" />
         <Columns>
             <asp:TemplateField HeaderText="Seleccionar">
                 <ItemTemplate>
-                    <asp:LinkButton CssClass="btn btn-primary" ID="lbtnSelect" runat="server" CommandName="Select" Text="Seleccionar"   />
+                    <asp:LinkButton CssClass="btn btn-default" ID="lbtnSelect" runat="server" CommandName="Select" Text="Seleccionar"   />
                 </ItemTemplate>
             </asp:TemplateField>
           
@@ -52,6 +66,13 @@
                 <ItemTemplate>
                     <div style="width: 450px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis">
                         <%# Eval("Descripcion") %>
+                    </div>
+                </ItemTemplate>
+            </asp:TemplateField>
+             <asp:TemplateField HeaderText="Responsable" >
+                <ItemTemplate>
+                      <div class="text-info" style="font-style:italic;  overflow: hidden; white-space: nowrap; text-overflow: ellipsis">
+                        <%# Eval("responsable") %>
                     </div>
                 </ItemTemplate>
             </asp:TemplateField>
