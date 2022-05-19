@@ -126,18 +126,6 @@ C:\Users\3LD4N\Desktop\Aplicacion Web\inmobapp_web\inmobapp_web\bin\roslyn\vbc.e
 C:\Users\3LD4N\Desktop\Aplicacion Web\inmobapp_web\inmobapp_web\bin\roslyn\vbc.rsp
 C:\Users\3LD4N\Desktop\Aplicacion Web\inmobapp_web\inmobapp_web\bin\roslyn\VBCSCompiler.exe
 C:\Users\3LD4N\Desktop\Aplicacion Web\inmobapp_web\inmobapp_web\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\3LD4N\Desktop\Aplicacion Web\inmobapp_web\inmobapp_web\bin\Antlr3.Runtime.dll
-C:\Users\3LD4N\Desktop\Aplicacion Web\inmobapp_web\inmobapp_web\bin\AspNet.ScriptManager.bootstrap.dll
-C:\Users\3LD4N\Desktop\Aplicacion Web\inmobapp_web\inmobapp_web\bin\AspNet.ScriptManager.jQuery.dll
-C:\Users\3LD4N\Desktop\Aplicacion Web\inmobapp_web\inmobapp_web\bin\Microsoft.AspNet.FriendlyUrls.dll
-C:\Users\3LD4N\Desktop\Aplicacion Web\inmobapp_web\inmobapp_web\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
-C:\Users\3LD4N\Desktop\Aplicacion Web\inmobapp_web\inmobapp_web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-C:\Users\3LD4N\Desktop\Aplicacion Web\inmobapp_web\inmobapp_web\bin\Microsoft.ScriptManager.MSAjax.dll
-C:\Users\3LD4N\Desktop\Aplicacion Web\inmobapp_web\inmobapp_web\bin\Microsoft.ScriptManager.WebForms.dll
-C:\Users\3LD4N\Desktop\Aplicacion Web\inmobapp_web\inmobapp_web\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\3LD4N\Desktop\Aplicacion Web\inmobapp_web\inmobapp_web\bin\Newtonsoft.Json.dll
-C:\Users\3LD4N\Desktop\Aplicacion Web\inmobapp_web\inmobapp_web\bin\System.Web.Optimization.dll
-C:\Users\3LD4N\Desktop\Aplicacion Web\inmobapp_web\inmobapp_web\bin\WebGrease.dll
 C:\Users\3LD4N\Desktop\Aplicacion Web\inmobapp_web\inmobapp_web\bin\System.Web.Optimization.xml
 C:\Users\3LD4N\Desktop\Aplicacion Web\inmobapp_web\inmobapp_web\bin\Newtonsoft.Json.xml
 C:\Users\3LD4N\Desktop\Aplicacion Web\inmobapp_web\inmobapp_web\bin\Antlr3.Runtime.pdb
@@ -150,7 +138,6 @@ C:\Users\3LD4N\Desktop\Aplicacion Web\inmobapp_web\inmobapp_web\obj\Debug\inmoba
 C:\Users\3LD4N\Desktop\Aplicacion Web\inmobapp_web\inmobapp_web\obj\Debug\inmobapp_web.csproj.CopyComplete
 C:\Users\3LD4N\Desktop\Aplicacion Web\inmobapp_web\inmobapp_web\obj\Debug\inmobapp_web.dll
 C:\Users\3LD4N\Desktop\Aplicacion Web\inmobapp_web\inmobapp_web\obj\Debug\inmobapp_web.pdb
-C:\Users\3LD4N\Desktop\Aplicacion Web\inmobapp_web\inmobapp_web\bin\FluentValidation.dll
 C:\Users\3LD4N\Desktop\Aplicacion Web\inmobapp_web\inmobapp_web\bin\FluentValidation.xml
 C:\Users\jdoo2\Documents\GitHub\inmobapp_web\inmobapp_web\obj\Debug\inmobapp_web.csproj.AssemblyReference.cache
 C:\Users\jdoo2\Documents\GitHub\inmobapp_web\inmobapp_web\obj\Debug\inmobapp_web.csproj.CoreCompileInputs.cache
