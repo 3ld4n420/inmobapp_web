@@ -85,14 +85,10 @@
 
         </table>
 
-          </div>
+        </div>
         </div>
 
-
-         
-
-
-        <div style="margin: auto; width: 36%; padding: 10px;">
+                <div style="margin: auto; width: 36%; padding: 10px;">
              <asp:Button CssClass="btn btn-success" ID="btnInsert" runat="server"
                 Text="Crear" OnClick="btnInsert_Click" />
              <asp:Button CssClass="btn btn-warning" ID="btnUpdate" runat="server"
@@ -104,7 +100,10 @@
         </div>
         <br />
         <br />
-        <!------------------------------------VALIDACIONES DE LOS CAMPOS------------------------------------------------------------>
+
+    </div>
+
+            <!------------------------------------VALIDACIONES DE LOS CAMPOS------------------------------------------------------------>
         <div >
             <asp:CustomValidator class="alert alert-danger text-dark" ID="CustomValidator1" runat="server" ErrorMessage="CustomValidator"><strong>Llene por favor los campos</strong></asp:CustomValidator>
             <br />
@@ -135,7 +134,6 @@
             <br />
         </div>
 
-    </div>
 
     <br />
     <asp:GridView CssClass="table table-bordered" ID="gvDatos" runat="server" CellPadding="3" GridLines="Horizontal"

@@ -67,5 +67,10 @@ namespace inmobapp_web
                 _connection.Close();
             }
         }
+
+        protected void btnOlvideClave_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Contactar al administrador del sistema al número XXXXXXXXXXX");
+        }
     }
 }
