@@ -18,25 +18,25 @@
             <tr>
                 <td hidden>
                     <label>ID del usuario:</label><br />
-                    <asp:TextBox ID="txt_usr_id" runat="server" CssClass="list-group-item col-lg-10" />
+                    <asp:TextBox ID="txt_usr_id" runat="server" CssClass="list-group-item text-dark col-lg-10" />
                 </td>
                 <td hidden>
                     <label>Fecha creacion del usuario:</label><br />
-                    <asp:TextBox ID="txt_usr_fecha_creacion" runat="server" CssClass="list-group-item col-lg-10" />
+                    <asp:TextBox ID="txt_usr_fecha_creacion" runat="server" CssClass="list-group-item text-dark col-lg-10" />
                 </td>
             </tr>
             <tr>
                 <td colspan="2">
                     <label>Nombres y Apellidos :</label><br />
-                    <asp:TextBox ID="txt_usr_nombres_apellidos" runat="server" CssClass="col-form-label border-primary col-lg-10"  style=" max-width: 100%; width: 92%;" />
+                    <asp:TextBox ID="txt_usr_nombres_apellidos" runat="server" CssClass="col-form-label text-dark border-primary col-lg-10"  style=" max-width: 100%; width: 92%;" />
                 </td>
                 <td>
                     <label>Tipo identificación:</label><br />
-                    <asp:DropDownList ID="ddl_usr_tipo_identificacion" runat="server" CssClass="list-group-item border-primary col-lg-10 text-dark bg-white"></asp:DropDownList>
+                    <asp:DropDownList ID="ddl_usr_tipo_identificacion" runat="server" CssClass="list-group-item border-primary text-dark col-lg-10 text-dark bg-white"></asp:DropDownList>
                 </td>                
                 <td>
                     <label>Número identificacion:</label><br />
-                    <asp:TextBox ID="txt_usr_numero_identificacion" runat="server" CssClass="col-form-label border-primary col-lg-10" />
+                    <asp:TextBox ID="txt_usr_numero_identificacion" runat="server" CssClass="col-form-label text-dark border-primary col-lg-10" />
                 </td>
             </tr>
             <tr>
@@ -45,27 +45,30 @@
                <td colspan="2">
                    <br />
                     <label>Correo usuario:</label><br />
-                    <asp:TextBox ID="txt_usr_correo" runat="server" CssClass="col-form-label border-primary col-lg-10" style=" max-width: 100%; width: 95%; top: 0px; left: 0px;" />
+                    <asp:TextBox ID="txt_usr_correo" runat="server" CssClass="col-form-label text-dark border-primary col-lg-10" style=" max-width: 100%; width: 95%; top: 0px; left: 0px;" />
                 </td>
               
                 
                <td>
                    <br />
                     <label>Clave usuario:</label><br />
-                    <asp:TextBox ID="txt_usr_clave" runat="server" CssClass="col-form-label border-primary col-lg-10" style=" max-width: 100%; width: 95%; top: 0px; left: 0px;" />
+                    <asp:TextBox ID="txt_usr_clave" runat="server" CssClass="col-form-label text-dark border-primary col-lg-10" style=" max-width: 100%; width: 95%; top: 0px; left: 0px;" />
                 </td>
 
                 <td>
                     <br />
                      <label>Permisos usuario:</label><br />
-                    <asp:DropDownList ID="ddl_usr_rol" runat="server" CssClass="list-group-item border-primary col-lg-10 text-dark bg-white"></asp:DropDownList>                
+                    <asp:DropDownList ID="ddl_usr_rol" runat="server" CssClass="list-group-item text-dark border-primary col-lg-10 text-dark bg-white"></asp:DropDownList>                
                 </td>
             </tr>
             <tr>
                 <td colspan="2">
                     <br />
-                    <label>Usuario activo:</label><br />
-                    <asp:DropDownList ID="ddl_usr_activo" runat="server" CssClass="list-group-item border-primary col-lg-10 text-dark bg-white"></asp:DropDownList>                
+                    <label>Estado Usuario:</label><br />
+                    <asp:DropDownList ID="ddl_usr_activo" runat="server" CssClass="list-group-item text-dark border-primary col-lg-10 text-dark bg-white">
+                        <asp:ListItem Value="1">Activo</asp:ListItem>
+                        <asp:ListItem Value="0">Innactivo</asp:ListItem>
+                    </asp:DropDownList>                
                 </td>             
              
             </tr>

@@ -531,7 +531,7 @@ namespace inmobapp_web
         protected void btnCancel_Click(object sender, EventArgs e)
         {
             ResetAll(); //to reset all form controls
-
+            Response.Redirect("Inmuebles.aspx");
         }
 
         //call to reset all form controls

@@ -274,7 +274,7 @@
                         <asp:Label ID="lblCantidad" Text='<%#Eval("Cantidad") %>' runat="server" />
                     </ItemTemplate>
                     <EditItemTemplate>
-                        <asp:DropDownList ID="ddlCantidad" runat="server" CssClass="DropDown">
+                        <asp:DropDownList ID="ddlCantidad" runat="server" CssClass="DropDown text-dark">
                             <asp:ListItem Value="1">1</asp:ListItem>
                             <asp:ListItem Value="2">2</asp:ListItem>
                             <asp:ListItem Value="3">3</asp:ListItem>
@@ -293,7 +293,7 @@
                         <asp:Label ID="lblMaterial" Text='<%#Eval("Material") %>' runat="server" />
                     </ItemTemplate>
                     <EditItemTemplate>
-                        <asp:DropDownList ID="ddlMaterial" runat="server" CssClass="DropDown">
+                        <asp:DropDownList ID="ddlMaterial" runat="server" CssClass="DropDown text-dark">
                             <asp:ListItem Value="1">Madera</asp:ListItem>
                             <asp:ListItem Value="2">Aluminio</asp:ListItem>
                             <asp:ListItem Value="3">Ceramica</asp:ListItem>
@@ -307,7 +307,7 @@
                         <asp:Label ID="lblEstado" Text='<%#Eval("Estado") %>' runat="server" />
                     </ItemTemplate>
                     <EditItemTemplate>
-                        <asp:DropDownList ID="ddlEstado" runat="server" CssClass="DropDown">
+                        <asp:DropDownList ID="ddlEstado" runat="server" CssClass="DropDown text-dark">
                             <asp:ListItem Value="1">Bueno</asp:ListItem>
                             <asp:ListItem Value="2">Regular</asp:ListItem>
                             <asp:ListItem Value="3">Malo</asp:ListItem>
@@ -319,7 +319,7 @@
                         <asp:Label ID="lblObs" Text='<%#Eval("Observaciones") %>' runat="server" />
                     </ItemTemplate>
                     <EditItemTemplate>
-                        <asp:TextBox ID="txtObservaciones" runat="server" Text='<%# Eval("Observaciones" ) %>'></asp:TextBox>
+                        <asp:TextBox ID="txtObservaciones" CssClass="text-black"  runat="server" Text='<%# Eval("Observaciones" ) %>'></asp:TextBox>
                     </EditItemTemplate>
 
                 </asp:TemplateField>
@@ -353,7 +353,7 @@
                         <asp:Label ID="lblCantidad" Text='<%#Eval("Cantidad") %>' runat="server" />
                     </ItemTemplate>
                     <EditItemTemplate>
-                        <asp:DropDownList ID="ddlCantidad" runat="server" CssClass="DropDown">
+                        <asp:DropDownList ID="ddlCantidad" runat="server" CssClass="DropDown text-dark">
                             <asp:ListItem Value="1">1</asp:ListItem>
                             <asp:ListItem Value="2">2</asp:ListItem>
                             <asp:ListItem Value="3">3</asp:ListItem>
@@ -372,7 +372,7 @@
                         <asp:Label ID="lblMaterial" Text='<%#Eval("Material") %>' runat="server" />
                     </ItemTemplate>
                     <EditItemTemplate>
-                        <asp:DropDownList ID="ddlMaterial" runat="server" CssClass="DropDown">
+                        <asp:DropDownList ID="ddlMaterial" runat="server" CssClass="DropDown text-dark">
                             <asp:ListItem Value="1">Madera</asp:ListItem>
                             <asp:ListItem Value="2">Aluminio</asp:ListItem>
                             <asp:ListItem Value="3">Ceramica</asp:ListItem>
@@ -386,7 +386,7 @@
                         <asp:Label ID="lblEstado" Text='<%#Eval("Estado") %>' runat="server" />
                     </ItemTemplate>
                     <EditItemTemplate>
-                        <asp:DropDownList ID="ddlEstado" runat="server" CssClass="DropDown">
+                        <asp:DropDownList ID="ddlEstado" runat="server" CssClass="DropDown  text-dark">
                             <asp:ListItem Value="1">Bueno</asp:ListItem>
                             <asp:ListItem Value="2">Regular</asp:ListItem>
                             <asp:ListItem Value="3">Malo</asp:ListItem>
@@ -398,7 +398,7 @@
                         <asp:Label ID="lblObs" Text='<%#Eval("Observaciones") %>' runat="server" />
                     </ItemTemplate>
                     <EditItemTemplate>
-                        <asp:TextBox ID="txtObservaciones" runat="server" Text='<%# Eval("Observaciones" ) %>'></asp:TextBox>
+                        <asp:TextBox ID="txtObservaciones" CssClass="text-black" runat ="server"  Text='<%# Eval("Observaciones" ) %>'></asp:TextBox>
                     </EditItemTemplate>
 
                 </asp:TemplateField>
@@ -433,7 +433,7 @@
                         <asp:Label ID="lblCantidad" Text='<%#Eval("Cantidad") %>' runat="server" />
                     </ItemTemplate>
                     <EditItemTemplate>
-                        <asp:DropDownList ID="ddlCantidad" runat="server" CssClass="DropDown">
+                        <asp:DropDownList ID="ddlCantidad" runat="server" CssClass="DropDown  text-dark">
                             <asp:ListItem Value="1">1</asp:ListItem>
                             <asp:ListItem Value="2">2</asp:ListItem>
                             <asp:ListItem Value="3">3</asp:ListItem>
@@ -452,7 +452,7 @@
                         <asp:Label ID="lblMaterial" Text='<%#Eval("Material") %>' runat="server" />
                     </ItemTemplate>
                     <EditItemTemplate>
-                        <asp:DropDownList ID="ddlMaterial" runat="server" CssClass="DropDown">
+                        <asp:DropDownList ID="ddlMaterial" runat="server" CssClass="DropDown  text-dark">
                             <asp:ListItem Value="1">Madera</asp:ListItem>
                             <asp:ListItem Value="2">Aluminio</asp:ListItem>
                             <asp:ListItem Value="3">Ceramica</asp:ListItem>
@@ -466,7 +466,7 @@
                         <asp:Label ID="lblEstado" Text='<%#Eval("Estado") %>' runat="server" />
                     </ItemTemplate>
                     <EditItemTemplate>
-                        <asp:DropDownList ID="ddlEstado" runat="server" CssClass="DropDown">
+                        <asp:DropDownList ID="ddlEstado" runat="server" CssClass="DropDown  text-dark">
                             <asp:ListItem Value="1">Bueno</asp:ListItem>
                             <asp:ListItem Value="2">Regular</asp:ListItem>
                             <asp:ListItem Value="3">Malo</asp:ListItem>
@@ -478,7 +478,7 @@
                         <asp:Label ID="lblObs" Text='<%#Eval("Observaciones") %>' runat="server" />
                     </ItemTemplate>
                     <EditItemTemplate>
-                        <asp:TextBox ID="txtObservaciones" runat="server" Text='<%# Eval("Observaciones" ) %>'></asp:TextBox>
+                        <asp:TextBox ID="txtObservaciones" CssClass="text-black" runat="server" Text='<%# Eval("Observaciones" ) %>'></asp:TextBox>
                     </EditItemTemplate>
 
                 </asp:TemplateField>
