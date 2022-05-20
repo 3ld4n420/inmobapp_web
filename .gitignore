@@ -4,3 +4,10 @@ inmobapp_web/obj/Release/.NETFramework,Version=v4.7.2.AssemblyAttributes.cs
 *.config
 inmobapp_web/obj/Release/.NETFramework,Version=v4.7.2.AssemblyAttributes.cs
 .vs/inmobapp_web/v17/.suo
+.vs/inmobapp_web/config/applicationhost.config
+inmobapp_web/obj/Debug/inmobapp_web.pdb
+inmobapp_web/obj/Debug/inmobapp_web.dll
+inmobapp_web/obj/Debug/inmobapp_web.csproj.AssemblyReference.cache
+inmobapp_web/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+inmobapp_web/bin/inmobapp_web.pdb
+inmobapp_web/bin/inmobapp_web.dll
