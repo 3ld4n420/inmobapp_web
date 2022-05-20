@@ -14,7 +14,7 @@
         <div class="card-header">DATOS BASICOS DEL ASESOR EXTERNO</div>
         <div class="card-body">
 
-         <table  style="margin: auto; width: 90%; padding: 10px;" >
+         <table  style="margin: auto; width: 90%; padding: 10px;">
             <tr>
                 <td hidden>
                     <label>Codigo:</label><br />

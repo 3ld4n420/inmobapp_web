@@ -7,6 +7,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Windows.Forms;
 
 namespace inmobapp_web
 {
@@ -29,13 +30,13 @@ namespace inmobapp_web
                 SqlCommand sqlCommand;
                 //SqlDataReader sqlDataReader;
 
-                string sql = "Select * FROM tb_usuarios_sistema WHERE usr_usuario = @usuario AND usr_contrasenia = @password AND usr_activo = 1 ";
+                string sql = "Select * FROM tb_usuarios_inmobapp WHERE usr_correo = @correo AND usr_clave = @clave AND usr_activo = 1 ";
 
 
                 sqlCommand = new SqlCommand(sql, _connection);
 
-                sqlCommand.Parameters.AddWithValue("@usuario", txtUsuario.Text.Trim());
-                sqlCommand.Parameters.AddWithValue("@password", txtPassword.Text);
+                sqlCommand.Parameters.AddWithValue("@correo", txtUsuario.Text.Trim());
+                sqlCommand.Parameters.AddWithValue("@clave", txtPassword.Text);
 
 
                 //sqlDataReader = sqlCommand.ExecuteReader();
@@ -52,7 +53,7 @@ namespace inmobapp_web
                 }
                 else
                 {
-                   
+                    MessageBox.Show("Correo o Clave incorrectos. Por favor verifique sus credenciales y vuelva a intentarlo.");
 
                 }
 

@@ -157,7 +157,7 @@
 
             </asp:BoundField>
 
-            <asp:TemplateField HeaderText="Codigo">
+            <asp:TemplateField HeaderText="TipoId">
                 <ItemTemplate>
                     <asp:Label ID="lblTipoId" Text='<%#Eval("TipoId") %>' runat="server" />
                 </ItemTemplate>
@@ -206,10 +206,7 @@
                 <ItemTemplate>
                     <asp:Label ID="lblEntidad" Text='<%#Eval("Entidad") %>' runat="server" />
                 </ItemTemplate>
-            </asp:TemplateField>
-         
-
-         
+            </asp:TemplateField>      
         </Columns>
 
 <HeaderStyle BackColor="#ff3399"></HeaderStyle>
