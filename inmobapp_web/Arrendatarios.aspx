@@ -23,15 +23,15 @@
             <tr>
                 <td colspan="2">
                     <label>Nombres y Apellidos :</label><br />
-                    <asp:TextBox ID="txtNombres" runat="server" CssClass="col-form-label border-primary col-lg-10"  style=" max-width: 100%; width: 92%;" />
+                    <asp:TextBox ID="txtNombres" runat="server" CssClass="col-form-label text-dark border-primary col-lg-10"  style=" max-width: 100%; width: 92%;" />
                 </td>
                 <td>
                     <label>Tipo identificación:</label><br />
-                    <asp:DropDownList ID="ddlTipo" runat="server" CssClass="list-group-item border-primary col-lg-10 text-dark bg-white"></asp:DropDownList>
+                    <asp:DropDownList ID="ddlTipo" runat="server" CssClass="list-group-item text-dark border-primary col-lg-10 text-dark bg-white"></asp:DropDownList>
                 </td>                
                 <td>
                     <label>Identificacion:</label><br />
-                    <asp:TextBox ID="txtIdentificacion" runat="server" CssClass="col-form-label border-primary col-lg-10" />
+                    <asp:TextBox ID="txtIdentificacion" runat="server" CssClass="col-form-label text-dark border-primary col-lg-10" />
                 </td>
             </tr>
             <tr>
@@ -39,13 +39,13 @@
                <td colspan="3">
                    <br />
                     <label>Direccion de Residencia:</label><br />
-                    <asp:TextBox ID="txtDireccion" runat="server" CssClass="col-form-label border-primary col-lg-10" style=" max-width: 100%; width: 95%;" />
+                    <asp:TextBox ID="txtDireccion" runat="server" CssClass="col-form-label text-dark border-primary col-lg-10" style=" max-width: 100%; width: 95%;" />
                 </td>
               
                 <td>
                     <br />
                      <label>Telfono Fijo :</label><br />
-                    <asp:TextBox ID="txtFijo" runat="server" CssClass="col-form-label border-primary col-lg-10"  />
+                    <asp:TextBox ID="txtFijo" runat="server" CssClass="col-form-label text-dark border-primary col-lg-10"  />
                 
                 </td>
             </tr>
@@ -53,12 +53,12 @@
                 <td colspan="2">
                     <br />
                     <label>Telefono Movil :</label><br />
-                    <asp:TextBox ID="txtCelular" runat="server" CssClass="col-form-label border-primary col-lg-10" style="max-width: 100%; width: 92%;" />
+                    <asp:TextBox ID="txtCelular" runat="server" CssClass="col-form-label text-dark border-primary col-lg-10" style="max-width: 100%; width: 92%;" />
                 </td>
                   <td colspan="2">
                       <br />
                     <label>Correo Electronico:</label><br />
-                     <asp:TextBox ID="txtMail" runat="server" CssClass="col-form-label border-primary col-lg-10" style="max-width: 100%; width: 75%;"  />
+                     <asp:TextBox ID="txtMail" runat="server" CssClass="col-form-label text-dark border-primary col-lg-10" style="max-width: 100%; width: 75%;"  />
 
                 </td>                
              

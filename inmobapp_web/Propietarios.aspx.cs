@@ -287,7 +287,7 @@ namespace inmobapp_web
         protected void btnCancel_Click(object sender, EventArgs e)
         {
             ResetAll(); //to reset all form controls
-            Response.Redirect("UsuariosSistema.aspx");
+            Response.Redirect("Propietarios.aspx");
 
 
         }
