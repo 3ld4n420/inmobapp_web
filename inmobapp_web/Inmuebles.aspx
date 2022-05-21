@@ -98,7 +98,7 @@
                  Text="Cancelar" OnClick="btnCancel_Click" />
         </div>
 
-        <div>
+       <%-- <div>
 
             <asp:RequiredFieldValidator class="alert alert-danger" ID="RequiredFieldValidator1" runat="server" ErrorMessage="RequiredFieldValidator" ControlToValidate="txtMatricula" ><strong>Por favor digite la Matricula del inmueble</strong> </asp:RequiredFieldValidator>
             <br />
@@ -121,7 +121,7 @@
             <br />
             <asp:RegularExpressionValidator class="alert alert-danger" ID="RegularExpressionValidator7" runat="server" ErrorMessage="RegularExpressionValidator" ControlToValidate="txtValorImpuesto" ValidationExpression="^\d+(\.\d\d)?$"><strong>Digite correctamente el valor del Impuesto</strong> </asp:RegularExpressionValidator>
 
-        </div>
+        </div>--%>
     </div>
     <br />
     <div style="margin: auto; width: 90%;">
